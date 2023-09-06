@@ -111,6 +111,14 @@ public:
     {
         return denum;
     }
+    void setNum()
+    {
+        cin >> num;
+    }
+    void setDenum()
+    {
+        cin >> denum;
+    }
 };
 
 int main()

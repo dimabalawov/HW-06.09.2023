@@ -15,6 +15,11 @@ public:
         cin >> num;
         cout << "Enter the denuminator: ";
         cin >> denum;
+        while (!denum)
+        {
+            cout << "You cannot enter 0" << endl;
+            cin >> denum;
+        }
     }
     Fraction sumFrac(Fraction b)
     {
@@ -125,16 +130,28 @@ int main()
 {
     Fraction a;
     Fraction b;
+    Fraction res;
     a.initFrac();
     b.initFrac();
-    a = a.subFrac(b);
-    a = a.divFrac(b);
-    a = a.multFrac(b);
-    cout << "Numinator: " << a.getNum() << endl;
-    cout << "Denuminator: " << a.getDenum() << endl;
+    res = a.subFrac(b);
+    cout << "Subsraction: " << endl;
+    cout << "Numinator: " <<res.getNum() << endl;
+    cout << "Denuminator: " << res.getDenum() << endl;
+    res = a.divFrac(b);
+    cout << "Divide: " << endl;
+    cout << "Numinator: " << res.getNum() << endl;
+    cout << "Denuminator: " << res.getDenum() << endl;
+    res = a.multFrac(b);
+    cout << "Multiplication: " << endl;
+    cout << "Numinator: " << res.getNum() << endl;
+    cout << "Denuminator: " << res.getDenum() << endl;
+    res = a.sumFrac(b);
+    cout << "Summ" << endl;
+    cout << "Numinator: " << res.getNum() << endl;
+    cout << "Denuminator: " << res.getDenum() << endl;
     cout << "Reduced fraction: " << endl;
-    a.reduceFrac();
-    cout << "Numinator: " << a.getNum() << endl;
-    cout << "Denuminator: " << a.getDenum() << endl;
+    res.reduceFrac();
+    cout << "Numinator: " << res.getNum() << endl;
+    cout << "Denuminator: " << res.getDenum() << endl;
     
 }
